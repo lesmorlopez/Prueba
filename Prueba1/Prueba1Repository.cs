@@ -91,6 +91,9 @@ namespace Prueba1
             RepoItemInfo _btnigualInfo;
             RepoItemInfo _lblresultadoInfo;
             RepoItemInfo _clearentrybuttonInfo;
+            RepoItemInfo _num1buttonInfo;
+            RepoItemInfo _plusbuttonInfo;
+            RepoItemInfo _equalbuttonInfo;
 
             /// <summary>
             /// Creates a new Calculadora  folder.
@@ -104,6 +107,9 @@ namespace Prueba1
                 _btnigualInfo = new RepoItemInfo(this, "btnIgual", ".//button[@automationid='equalButton']/text[@name='']", 30000, null, "139ab03b-698b-4395-b2ba-8da048e2cbbb");
                 _lblresultadoInfo = new RepoItemInfo(this, "lblResultado", "?/?/text[@automationid='CalculatorResults']/?/?/text[@automationid='NormalOutput']", 30000, null, "f8ca1fea-7c83-4ccf-956b-0440221c76c5");
                 _clearentrybuttonInfo = new RepoItemInfo(this, "ClearEntryButton", "?/?/container[@automationid='DisplayControls']/button[@automationid='clearEntryButton']", 30000, null, "c9e3f727-de17-4abe-b22f-15e33f7b5a42");
+                _num1buttonInfo = new RepoItemInfo(this, "Num1Button", "?/?/container[@automationid='NumberPad']/button[@automationid='num1Button']", 30000, null, "af60680c-4115-4493-92ca-302049480271");
+                _plusbuttonInfo = new RepoItemInfo(this, "PlusButton", "?/?/container[@automationid='StandardOperators']/button[@automationid='plusButton']", 30000, null, "904cd5f4-97ce-45da-9ff8-d0f3104c2e9d");
+                _equalbuttonInfo = new RepoItemInfo(this, "EqualButton", "?/?/container[@automationid='StandardOperators']/button[@automationid='equalButton']", 30000, null, "8840f4a7-e470-45a9-ac49-c5de7eda0312");
             }
 
             /// <summary>
@@ -271,6 +277,78 @@ namespace Prueba1
                 get
                 {
                     return _clearentrybuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The Num1Button item.
+            /// </summary>
+            [RepositoryItem("af60680c-4115-4493-92ca-302049480271")]
+            public virtual Ranorex.Button Num1Button
+            {
+                get
+                {
+                    return _num1buttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The Num1Button item info.
+            /// </summary>
+            [RepositoryItemInfo("af60680c-4115-4493-92ca-302049480271")]
+            public virtual RepoItemInfo Num1ButtonInfo
+            {
+                get
+                {
+                    return _num1buttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The PlusButton item.
+            /// </summary>
+            [RepositoryItem("904cd5f4-97ce-45da-9ff8-d0f3104c2e9d")]
+            public virtual Ranorex.Button PlusButton
+            {
+                get
+                {
+                    return _plusbuttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The PlusButton item info.
+            /// </summary>
+            [RepositoryItemInfo("904cd5f4-97ce-45da-9ff8-d0f3104c2e9d")]
+            public virtual RepoItemInfo PlusButtonInfo
+            {
+                get
+                {
+                    return _plusbuttonInfo;
+                }
+            }
+
+            /// <summary>
+            /// The EqualButton item.
+            /// </summary>
+            [RepositoryItem("8840f4a7-e470-45a9-ac49-c5de7eda0312")]
+            public virtual Ranorex.Button EqualButton
+            {
+                get
+                {
+                    return _equalbuttonInfo.CreateAdapter<Ranorex.Button>(true);
+                }
+            }
+
+            /// <summary>
+            /// The EqualButton item info.
+            /// </summary>
+            [RepositoryItemInfo("8840f4a7-e470-45a9-ac49-c5de7eda0312")]
+            public virtual RepoItemInfo EqualButtonInfo
+            {
+                get
+                {
+                    return _equalbuttonInfo;
                 }
             }
         }
